@@ -13,6 +13,10 @@ const db = require("./database/db")
 // *3- CONFIGURAR PASTA PÚBLICA
 server.use(express.static("public"))
 
+// habilitar o uso do req.body na nossa aplicação
+server.use(express.urlencoded({ extended: true }))
+
+
 // *4- UTILIZANDO TEMPLATE ENGINE
 const nunjucks = require("nunjucks")
 nunjucks.configure("src/views", {
@@ -30,6 +34,48 @@ server.get("/", (req, res) => {
 // dirname: nome do diretório
 server.get("/create-point", (req, res) => {
     return res.render("create-point.html")
+})
+
+server.post("/save-point", (req, res) => {
+
+    // req.body é o corpo do nosso formulário
+    // console.log(req.body)
+
+    // inserir dados no banco de dados
+
+        // 2. inserir dados na tabela
+    const query = `
+        INSERT INTO places(
+            image,
+            name,
+            address,
+            address2,
+            state,
+            city,
+            items
+        ) VALUES (?,?,?,?,?,?,?);
+        `
+    const values =  [        
+        req.body.image,
+        req.body.name,
+        req.body.address,
+        req.body.address2, 
+        req.body.state,
+        req.body.city,
+        req.body.items
+    ]     
+
+    function afterInsertData(err) {
+        if(err) {
+            return console.log(err)
+            // se houver erro ele será retornado no console.log
+        }
+        console.log("Cadastrado com sucesso")
+        console.log(this)
+
+        return res.render("create-point.html", { saved: true })
+    }
+    db.run(query, values, afterInsertData)
 })
 
 server.get("/search", (req, res) => {
