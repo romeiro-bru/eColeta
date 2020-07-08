@@ -6,6 +6,9 @@ const express = require("express")
 // que poderá por exemplo, ligar o servidor
 const server = express()
 
+// pegar o banco de dados
+const db = require("./database/db")
+
 
 // *3- CONFIGURAR PASTA PÚBLICA
 server.use(express.static("public"))
@@ -16,10 +19,6 @@ nunjucks.configure("src/views", {
     express: server, 
     noCache: true
 })
-
-
-
-
 
 // **2- CONFIGURAR CAMINHOS da aplicação
 //  pág inicial
@@ -34,7 +33,17 @@ server.get("/create-point", (req, res) => {
 })
 
 server.get("/search", (req, res) => {
-    return res.render("search-results.html")
+    // pegar dados do banco de dados
+     db.all(`SELECT * FROM places`, function(err, rows) {
+         if(err) {
+             return console.log(err)
+         }
+
+        //  número total dos pontos de coleta
+         const totalPlaces = rows.length
+         // mostrar a pág html com os dados do banco de dados
+         return res.render("search-results.html", { places: rows, totalPlaces: totalPlaces})
+    })
 })
 
 
