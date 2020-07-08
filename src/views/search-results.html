@@ -15,6 +15,9 @@
         {% include "partials/page-header.html" %}
 
         <main>
+        
+        {% if totalPlaces > 0 %}  
+
             <h4>
                 <strong>{{ totalPlaces }}</strong>
                 encontrados
@@ -39,6 +42,9 @@
                 </div>
                 {% endfor %}
 
+        {% else %}
+            <h3>Nenhum local de coleta encontrado.</h3>
+        {% endif %}
     
          
             </div>

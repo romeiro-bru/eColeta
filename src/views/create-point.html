@@ -6,6 +6,7 @@
 
 {% block styles %}
     <link rel="stylesheet" href="/styles/create-point.css">
+    <link rel="stylesheet" href="/styles/modal.css">
 {% endblock styles %}
 
 {% block content %}
@@ -16,7 +17,7 @@
             Voltar para home
         </a>
     </header>
-    <form action="">
+    <form action="/save-point" method="POST">
         <h1>Cadastro do ponto de coleta</h1>
         <fieldset>
             <legend>
@@ -70,23 +71,23 @@
                 <span>Selecione um ou mais itens abaixo</span>
             </legend>
             <div class="itens-grid">
-                <li data-id="item-1"><img src="/assets/lampadas.svg" alt="lampadas">
+                <li data-id="Lâmpadas"><img src="/assets/lampadas.svg" alt="lampadas">
                     <span>Lâmpadas</span>
                 </li>
-                <li data-id="item-2"><img src="/assets/baterias.svg" alt="pilhas e baterias">
+                <li data-id="Pilhas e Baterias"><img src="/assets/baterias.svg" alt="pilhas e baterias">
                     <span>Pilhas e Baterias</span>
                 </li>
-                <li data-id="item-3"><img src="/assets/papeis-papelao.svg" alt="Papéis e papelão">
+                <li data-id="Papéis e Papelão"><img src="/assets/papeis-papelao.svg" alt="Papéis e papelão">
                     <span>Papéis e Papelão</span>
                 </li>
-                <li data-id="item-4"><img src="/assets/organicos.svg" alt="Resíduos orgânicos">
+                <li data-id="Resíduos orgânicos"><img src="/assets/organicos.svg" alt="Resíduos orgânicos">
                     <span>Resíduos orgânicos</span>
                 </li>
-                <li data-id="item-5"><img src="/assets/eletronicos.svg" alt="Resíduos eletrônicos">
+                <li data-id="Resíduos ELetrônicos"><img src="/assets/eletronicos.svg" alt="Resíduos eletrônicos">
                     <span>Resíduos ELetrônicos</span>
                 </li>
-                <li data-id="item-6"><img src="/assets/oleo.svg" alt="Óleo de cozinha">
-                    <span>óleo de Cozinha</span>
+                <li data-id="Óleo de Cozinha"><img src="/assets/oleo.svg" alt="Óleo de cozinha">
+                    <span>Óleo de Cozinha</span>
                 </li>
             </div>
             <input type="hidden" name="itens">
@@ -98,10 +99,17 @@
 
     <main></main>
 </div>
+
 {% endblock content %}
 
+{% block modal %}
+    {% if saved %}
+        {% include "partials/point-created.html" %}
+    {% endif %}
+{% endblock modal %}
+
 {% block scripts %}
-<script src="assets/scripts/create-point.js"></script>
+    <script src="assets/scripts/create-point.js"></script>
 {% endblock scripts %}
 </body>
 </html>
