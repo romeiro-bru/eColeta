@@ -62,19 +62,19 @@ document
 ////////////////    TOGGGLE ITENS DE COLETA      //////////////
 
 // pegar todos os os li's
-const itensToCollect = document.querySelectorAll(".itens-grid li")
+const itemsToCollect = document.querySelectorAll(".items-grid li")
 // estrutura de repetição, ativar no evento CLICK
-for (const item of itensToCollect) {
+for (const item of itemsToCollect) {
     item.addEventListener("click", handleSelectedItem)
 }
 
 
 
-const colletedItens = document.querySelector("input[name=itens]")
+const colletedItems = document.querySelector("input[name=items]")
 
-// os itens selecionados irão para a array 
-// (nossa array, selectedItens começa vazia)
-let selectedItens = []
+// os items selecionados irão para a array 
+// (nossa array, selectedItems começa vazia)
+let selectedItems = []
 
 function handleSelectedItem(event) {
 // adicionar ou remover uma class com JS
@@ -84,28 +84,28 @@ function handleSelectedItem(event) {
 
     const itemId = itemLi.dataset.id
 
-// verificar se existem itens selecionados, se sim pegar esses itens selecionados
-    const alreadySelected = selectedItens.findIndex( item => {
+// verificar se existem items selecionados, se sim pegar esses items selecionados
+    const alreadySelected = selectedItems.findIndex( item => {
         // encontra o item e o comparando
         // const itemFound será true ou false
         const itemFound = item == itemId 
         return itemFound
     })
-// se for maior ou igual a 0 significar que ele está entre os itens selecionados, lembrando que o index começa em 0
+// se for maior ou igual a 0 significar que ele está entre os items selecionados, lembrando que o index começa em 0
     if( alreadySelected >= 0 ) {
 // caso já estejam selecionados, tirar da seleção
-        const filteredItens = selectedItens.filter( item => {
+        const filteredItems = selectedItems.filter( item => {
             //  o elemento filtrado será uma nova array no momento em que o retorno for false, esse item deve ser removido da array
             const intemIsDifferent = item != itemId
             return intemIsDifferent
         })
-        selectedItens = filteredItens
+        selectedItems = filteredItems
     } else {
 // se não estiver selecionado, adicionar à seleção
-        selectedItens.push(itemId)
+        selectedItems.push(itemId)
 
     }
-// atualizar o campo hidden com os itens selecionados
-    colletedItens.value = selectedItens
+// atualizar o campo hidden com os items selecionados
+    colletedItems.value = selectedItems
 }
 
