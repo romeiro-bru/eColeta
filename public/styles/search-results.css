@@ -117,13 +117,13 @@ form button:hover {
 }
 
 /* //////////////// */
-.itens-grid {
+.items-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     gap: 16px;   
 }
 
-.itens-grid li {
+.items-grid li {
     background-color: #f5f5f5;
     list-style: none;
     border: 2px solid #f5f5f5;
@@ -138,7 +138,7 @@ form button:hover {
     cursor: pointer;
 }
 
-.itens-grid li span {
+.items-grid li span {
     flex: 1;
     margin-top: 12px;
     display: flex;
@@ -146,13 +146,13 @@ form button:hover {
     color: var(--title-color);
 }
 
-.itens-grid li.selected {
+.items-grid li.selected {
     background: #e1faec;
     border: 2px solid #34cb79;
 }
 /* os evento de pointer no img e span não existem */
-.itens-grid li img,
-.itens-grid li span {
+.items-grid li img,
+.items-grid li span {
     pointer-events: none;
 }
 
