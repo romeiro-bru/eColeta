@@ -6,7 +6,7 @@
     justify-content: space-between;
 }
 #page-home {
-    height: 100vh;
+    height: 109vh;
     background: url('../assets/home-background.svg')no-repeat;
     background-position: 35vw bottom;
 }
@@ -26,7 +26,7 @@ img#logo {
 }
 #page-home header a {
     display: flex;
-    color: var(--title-color);
+    color: var(--secondary-color);
     font-weight: 700;
 }
 #page-home header a span {
