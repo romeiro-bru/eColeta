@@ -33,6 +33,7 @@ form {
     padding: 64px;
     border-radius: 8px;
     max-width: 770px;
+    box-shadow: 1px 1px 9px #5c5a5aa1;
 }
 
 form h1 {
@@ -111,7 +112,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #2fb82e;
+    background-color: var(--title-color);
 }
 
 /* //////////////// */
@@ -134,9 +135,11 @@ form button:hover {
     justify-content: space-between;
     text-align: center;
     cursor: pointer;
-    box-shadow: 1px 1px 4px #59cc79;
 }
 
+.items-grid li:hover {
+    box-shadow: 1px 1px 4px #59cc79;
+}
 .items-grid li span {
     flex: 1;
     margin-top: 12px;
@@ -146,7 +149,7 @@ form button:hover {
 }
 
 .items-grid li.selected {
-    background: #e1faec;
+    background: #e1faf9;
     border: 2px solid #34cb79;
     box-shadow: 1px 1px 9px #59cc79;
 }
