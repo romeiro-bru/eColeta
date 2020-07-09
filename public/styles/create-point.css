@@ -13,7 +13,7 @@
 }
 
 #page-create-point header a {
-    color: var(--title-color);
+    color: var(--secondary-color);
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@ form legend h2 {
 
 form legend span {
     font-size: 14px;
-    color: var(--title-color);
+    color: var(--secondary-color);
 }
 
 form .field {
@@ -134,6 +134,7 @@ form button:hover {
     justify-content: space-between;
     text-align: center;
     cursor: pointer;
+    box-shadow: 1px 1px 4px #59cc79;
 }
 
 .items-grid li span {
@@ -147,6 +148,7 @@ form button:hover {
 .items-grid li.selected {
     background: #e1faec;
     border: 2px solid #34cb79;
+    box-shadow: 1px 1px 9px #59cc79;
 }
 /* os evento de pointer no img e span não existem */
 .items-grid li img,
