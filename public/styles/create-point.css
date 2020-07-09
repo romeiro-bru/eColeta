@@ -33,6 +33,7 @@ form {
     padding: 64px;
     border-radius: 8px;
     max-width: 770px;
+    box-shadow: 1px 1px 9px #5c5a5aa1;
 }
 
 form h1 {
