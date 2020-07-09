@@ -83,20 +83,19 @@ server.get("/search", (req, res) => {
     const search = req.query.search
     if(search == "") {
         // pesquisa vazia
-        // mostrar a pág html com os dados do banco de dados
-        return res.render("search-results.html", { totalPlaces: 0 })
+        return res.render("search-results.html", { totalPlaces: 0})
     }
 
     // pegar dados do banco de dados
-     db.all(`SELECT * FROM places`, function(err, rows) {
-         if(err) {
-             return console.log(err)
-         }
+    db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, rows) {
+        if(err) {
+            return console.log(err)
+        }
 
         //  número total dos pontos de coleta
-         const totalPlaces = rows.length
-         // mostrar a pág html com os dados do banco de dados
-         return res.render("search-results.html", { places: rows, totalPlaces: totalPlaces})
+        const totalPlaces = rows.length
+        // mostrar a pág html com os dados do banco de dados
+        return res.render("search-results.html", { places: rows, totalPlaces: totalPlaces})
     })
 })
 
