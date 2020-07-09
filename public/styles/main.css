@@ -1,6 +1,7 @@
 :root {
-    --title-color: #322153;
+    --title-color: #3a8650;
     --primary-color: #34cb79;
+    --secondary-color: #322253;
 }
 * {
     margin: 0;
