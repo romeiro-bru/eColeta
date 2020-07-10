@@ -47,6 +47,7 @@ img#logo {
 }
 #page-home main h1 {
     font-size: 54px;
+    text-shadow: 2px 2px 1px white;
 }
 #page-home main p {
     font-size: 24px;
@@ -65,6 +66,7 @@ img#logo {
     background-color: var(--primary-color);
     transition: 400ms;
     color: white;
+    box-shadow: 3px 3px 10px #dad6d6;
 }
 
 #page-home main a:hover {
