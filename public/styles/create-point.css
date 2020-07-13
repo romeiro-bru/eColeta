@@ -39,6 +39,9 @@ form {
 form h1 {
     font-size: 36px;
 }
+form fieldset .field label {
+    color: var(--title-color);
+}
 
 form fieldset {
     margin-top: 64px;
@@ -137,6 +140,7 @@ form button:hover {
     justify-content: space-between;
     text-align: center;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .items-grid li:hover {
