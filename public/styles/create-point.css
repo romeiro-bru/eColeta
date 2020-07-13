@@ -28,12 +28,12 @@
 }
 
 form {
-    background-color: white;
+    background-color: black;
     margin: 80px auto;
     padding: 64px;
     border-radius: 8px;
     max-width: 770px;
-    box-shadow: 1px 1px 9px #5c5a5aa1;
+    box-shadow: 1px 1px 9px #2196F3;
 }
 
 form h1 {
@@ -75,7 +75,7 @@ form .field-group {
 
 form input,
 form select {
-    background-color: #f0f0f5;
+    background-color: rgb(227, 228, 231);
     border: 0;
     border-radius: 8px;
     padding: 16px 24px;
@@ -112,7 +112,9 @@ form button {
 }
 
 form button:hover {
-    background-color: var(--title-color);
+    background-color: #2fe26e;
+    transition: 400ms;
+    box-shadow: 1px 0px 5px #32ffec;
 }
 
 /* //////////////// */
@@ -123,7 +125,7 @@ form button:hover {
 }
 
 .items-grid li {
-    background-color: #f5f5f5;
+    background-color: rgb(227, 228, 231);
     list-style: none;
     border: 2px solid #f5f5f5;
     border-radius: 8px;
@@ -138,7 +140,7 @@ form button:hover {
 }
 
 .items-grid li:hover {
-    box-shadow: 1px 1px 4px #59cc79;
+    box-shadow: 1px 0px 5px #32ffec;
 }
 .items-grid li span {
     flex: 1;
