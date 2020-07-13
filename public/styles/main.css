@@ -1,7 +1,7 @@
 :root {
-    --title-color: #3a8650;
+    --title-color: #59cc79;
     --primary-color: #34cb79;
-    --secondary-color: #322253;
+    --secondary-color: #70f0c3;
 }
 * {
     margin: 0;
@@ -10,7 +10,7 @@
 }
 body {
     font-family: 'Roboto', 'sans-serif';
-    background: #c3dce1;
+    background: #051f38;
 }
 h1, h2, h3, h4, h5, h6 {
     color: var(--title-color);
@@ -19,4 +19,18 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
+}
+
+#ecoleta-icon {
+    width: 55px;
+}
+
+#ecoleta-logo {
+    font-weight: bold;
+    font-size: 37px;
+    position: absolute;
+    margin-left: 61px;
+    margin-top: 6px;
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 7px var(--primary-color);
 }

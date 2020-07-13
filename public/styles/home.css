@@ -6,9 +6,9 @@
     justify-content: space-between;
 }
 #page-home {
-    height: 109vh;
-    background: url('../assets/home-background.svg')no-repeat;
-    background-position: 35vw bottom;
+    height: 93vh;
+    background: url('../assets/recycletruck.svg')no-repeat;
+    background-position: 55vw bottom;
 }
 img#logo {
     width: 35px;
@@ -24,10 +24,12 @@ img#logo {
     display: flex;
     flex-direction: column;
 }
+
 #page-home header a {
     display: flex;
     color: var(--secondary-color);
     font-weight: 700;
+    text-shadow: 1px 1px 7px #59cc79;
 }
 #page-home header a span {
     margin-right: 10px;
@@ -47,12 +49,13 @@ img#logo {
 }
 #page-home main h1 {
     font-size: 54px;
-    text-shadow: 2px 2px 1px white;
+    text-shadow: 0px 0px 3px var(--secondary-color);
 }
 #page-home main p {
     font-size: 24px;
     line-height: 38px;
     margin-top: 24px;
+    color: white;
 }
 
 #page-home main a {
@@ -66,11 +69,12 @@ img#logo {
     background-color: var(--primary-color);
     transition: 400ms;
     color: white;
-    box-shadow: 3px 3px 10px #dad6d6;
+    box-shadow: 1px 0px 5px #32ffec;
 }
 
 #page-home main a:hover {
     background-color: #2fe26e;
+    box-shadow: 1px 0px 14px #32ffec;
 }
 #page-home main a span {
     width: 72px;
