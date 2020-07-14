@@ -32,11 +32,10 @@ img#logo {
     text-shadow: 1px 1px 7px #59cc79;
 }
 #page-home header a span {
-    margin-right: 10px;
+    margin-right: 8px;
     display: flex;
     background-image: url('../assets/next.svg');
     width: 20px;
-    height: 20px;
 }
 
 #page-home main {
