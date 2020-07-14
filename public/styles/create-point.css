@@ -146,6 +146,10 @@ form button:hover {
 .items-grid li:hover {
     box-shadow: 1px 0px 5px #32ffec;
 }
+
+.items-grid li img {
+    width: 83px;
+} 
 .items-grid li span {
     flex: 1;
     margin-top: 12px;
