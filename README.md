@@ -8,8 +8,9 @@
 
 Projeto criado durante a Next Level Week, evento promovido pela RocketSeat.:rocket:
 
-> 
-Em homenagem à semana do Meio Ambiente, a ideia foi criar um site onde as pessoas encontrariam pontos de coleta de resíduos de maneira rápida e eficiente.
+## Features :deciduous_tree:
+* Cadastre um ponto de coleta :computer:
+* Encontre o ponto de coleta pesquisando por cidade :mag_right:	
 
 ## Technologies :octocat:
 * JavaScript :sparkles:
