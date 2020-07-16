@@ -6,7 +6,7 @@
 
 ## ECOLETA :recycle:
 
-Projeto criado durante a Next Level Week, evento promovido pela RocketSeat.:rocket:
+Projeto criado durante a Next Level Week, promovido pela RocketSeat.:rocket:
 
 ## Features :deciduous_tree:
 * Cadastre um ponto de coleta :computer:
