@@ -4,7 +4,7 @@
 </p>
 <br/>
 
-## ECOLETA :recycle:
+## eColeta :recycle:
 
 Projeto criado durante a Next Level Week, promovido pela RocketSeat.:rocket:
 
